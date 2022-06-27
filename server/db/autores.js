@@ -20,7 +20,7 @@ autores.insereAutor = (autor) => {
             return resolve(results.rows);
         });
     });
-}
+};
 
 autores.updateAutor = (autor) => {
     return new Promise((resolve, reject) => {
@@ -32,7 +32,7 @@ autores.updateAutor = (autor) => {
             return resolve(results.rows);
         });
     });
-}
+};
 
 autores.listaAutores = () => {
     return new Promise((resolve, reject) => {
@@ -41,9 +41,9 @@ autores.listaAutores = () => {
                 return reject(err);
             }
             return resolve(results.rows);
-        })
-    })
-}
+        });
+    });
+};
 
 autores.listaAutorPorId = (id) => {
     return new Promise((resolve, reject) => {
@@ -52,9 +52,9 @@ autores.listaAutorPorId = (id) => {
                 return reject(err);
             }
             return resolve(results.rows);
-        })
-    })
-}
+        });
+    });
+};
 
 autores.listaAutorPorNome = (nome) => {
     return new Promise((resolve, reject) => {
@@ -63,9 +63,9 @@ autores.listaAutorPorNome = (nome) => {
                 return reject(err);
             }
             return resolve(results.rows);
-        })
-    })
-}
+        });
+    });
+};
 
 autores.deletaAutor = (id) => {
     return new Promise((resolve, reject) => {
@@ -77,6 +77,6 @@ autores.deletaAutor = (id) => {
             return resolve('Autor deletado');
         });
     });
-}
+};
 
 module.exports = autores;

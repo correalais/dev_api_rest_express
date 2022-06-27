@@ -20,7 +20,7 @@ clientes.insereCliente = (cliente) => {
             return resolve(results.rows);
         });
     });
-}
+};
 
 clientes.listaClientes = () => {
     return new Promise((resolve, reject) => {
@@ -31,7 +31,7 @@ clientes.listaClientes = () => {
             return resolve(results.rows);
         });
     });
-}
+};
 
 clientes.listaClientesMat = (matricula) => {
     return new Promise((resolve, reject) => {
@@ -42,7 +42,7 @@ clientes.listaClientesMat = (matricula) => {
             return resolve(results.rows);
         });
     });
-}
+};
 
 clientes.listaClientesNome = (nome) => {
     return new Promise((resolve, reject) => {
@@ -53,7 +53,7 @@ clientes.listaClientesNome = (nome) => {
             return resolve(results.rows);
         });
     });
-}
+};
 
 
 clientes.updateCliente = (cliente) => {
@@ -66,7 +66,7 @@ clientes.updateCliente = (cliente) => {
             return resolve(results.rows);
         });
     });
-}
+};
 
 clientes.deletaCliente = (matricula) => {
     return new Promise((resolve, reject) => {
@@ -78,7 +78,7 @@ clientes.deletaCliente = (matricula) => {
             return resolve('Cliente deletado');
         });
     });
-}
+};
 
 
 module.exports = clientes;

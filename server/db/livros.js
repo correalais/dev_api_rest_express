@@ -17,9 +17,9 @@ livros.retornaTodosOsLivros = () => {
                 return reject(err);
             }
             return resolve(results.rows);
-        })
-    })
-}
+        });
+    });
+};
 
 livros.procuraPorISBN = (isbn) => {
     return new Promise((resolve, reject) => {
@@ -28,9 +28,9 @@ livros.procuraPorISBN = (isbn) => {
                 return reject(err);
             }
             return resolve(results.rows);
-        })
-    })
-}
+        });
+    });
+};
 
 livros.insereLivro = (livro) => {
     return new Promise((resolve, reject) => {
@@ -41,9 +41,9 @@ livros.insereLivro = (livro) => {
                 return reject(err);
             }
             return resolve(results.rows);
-        })
-    })
-}
+        });
+    });
+};
 
 livros.deletaLivro = (isbn) => {
     return new Promise((resolve, reject) => {
@@ -53,9 +53,9 @@ livros.deletaLivro = (isbn) => {
                 return reject(err);
             }
             return resolve('Livro deletado');
-        })
-    })
-}
+        });
+    });
+};
 
 livros.procuraPorNome = (nome) => {
     return new Promise((resolve, reject) => {
@@ -64,9 +64,9 @@ livros.procuraPorNome = (nome) => {
                 return reject(err);
             }
             return resolve(results.rows);
-        })
-    })
-}
+        });
+    });
+};
 
 livros.updateLivro = (livro) => {
     return new Promise((resolve, reject) => {
@@ -76,9 +76,9 @@ livros.updateLivro = (livro) => {
                 return reject(err);
             }
             return resolve(results.rows);
-        })
-    })
-}
+        });
+    });
+};
 
 livros.retirarLivro = (valores) => {
     return new Promise((resolve, reject) => {
@@ -90,7 +90,7 @@ livros.retirarLivro = (valores) => {
             return resolve(results.rows);
         });
     });
-}
+};
 livros.devolverLivro = (valores) => {
     return new Promise((resolve, reject) => {
         connection.query ('SELECT * FROM devolverLivro($1, $2, $3, $4, $5, $6)',
@@ -101,7 +101,7 @@ livros.devolverLivro = (valores) => {
             return resolve(results.rows);
         });
     });
-}
+};
 
 
 module.exports = livros;

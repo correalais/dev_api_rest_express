@@ -34,7 +34,8 @@ livros.procuraPorISBN = (isbn) => {
 
 livros.insereLivro = (livro) => {
     return new Promise((resolve, reject) => {
-        connection.query ('INSERT INTO livros (isbn, nome, autor, editora, ano, status) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *', [livro.isbn, livro.nome, livro.autor, livro.editora, livro.ano, livro.status], 
+        connection.query ('INSERT INTO livros (isbn, nome, autor, editora, ano, status) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *', 
+        [livro.isbn, livro.nome, livro.autor, livro.editora, livro.ano, livro.status], 
         (err, results) => {    
             if (err) {
                 return reject(err);

@@ -36,6 +36,16 @@ app.get('/livros/nome/:nome', async (req, res) => {
     }
 });
 
+app.get('/livros/emprestimo/consultar', async (req, res) => {
+    try {
+        let results = await dbLivros.visualizarEmprestimo();
+        res.json(results);
+    } catch (err) {
+        console.log(err);
+        res.sendStatus(400);
+    }
+});
+
 app.post('/livros', async (req, res) => {
     try {
         const livro = req.body;
@@ -57,7 +67,7 @@ app.post('/livros/emprestimo/retirar', async (req, res) => {
         res.sendStatus(400);
     }
 });
-app.post('/livros/emprestimo/devolver', async (req, res) => {
+app.put('/livros/emprestimo/devolver', async (req, res) => {
     try {
         const valores = req.body;
         let results = await dbLivros.devolverLivro(valores);

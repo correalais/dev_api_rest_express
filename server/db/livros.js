@@ -20,6 +20,16 @@ livros.retornaTodosOsLivros = () => {
         });
     });
 };
+livros.visualizarEmprestimo = () => {
+    return new Promise((resolve, reject) => {
+        connection.query ('SELECT * FROM emprestimo', (err, results) => {
+            if (err) {
+                return reject(err);
+            }
+            return resolve(results.rows);
+        });
+    });
+};
 
 livros.procuraPorISBN = (isbn) => {
     return new Promise((resolve, reject) => {
@@ -102,6 +112,7 @@ livros.devolverLivro = (valores) => {
         });
     });
 };
+
 
 
 module.exports = livros;

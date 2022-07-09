@@ -10,7 +10,7 @@ app.get('/livros', async (req, res) => {
         res.json(results);
     } catch (err) {
         console.log(err);
-        res.sendStatus(400);
+        res.sendStatus(500);
     }
 });
 
@@ -21,7 +21,7 @@ app.get('/livros/:isbn', async (req, res) => {
         res.json(results);
     } catch (err) {
         console.log(err);
-        res.sendStatus(400);
+        res.sendStatus(500);
     }
 }); 
 
@@ -32,7 +32,7 @@ app.get('/livros/nome/:nome', async (req, res) => {
         res.json(results);
     } catch (err) {
         console.log(err);
-        res.sendStatus(400);
+        res.sendStatus(500);
     }
 });
 
@@ -42,7 +42,7 @@ app.get('/livros/emprestimo/consultar', async (req, res) => {
         res.json(results);
     } catch (err) {
         console.log(err);
-        res.sendStatus(400);
+        res.sendStatus(500);
     }
 });
 
@@ -53,7 +53,7 @@ app.post('/livros', async (req, res) => {
         res.json(results);
     } catch (err) {
         console.log(err);
-        res.sendStatus(400);
+        res.sendStatus(500);
     }
 });
 
@@ -64,7 +64,7 @@ app.post('/livros/emprestimo/retirar', async (req, res) => {
         res.json(results);
     } catch (err) {
         console.log(err);
-        res.sendStatus(400);
+        res.sendStatus(500);
     }
 });
 app.put('/livros/emprestimo/devolver', async (req, res) => {
@@ -74,7 +74,7 @@ app.put('/livros/emprestimo/devolver', async (req, res) => {
         res.json(results);
     } catch (err) {
         console.log(err);
-        res.sendStatus(400);
+        res.sendStatus(500);
     }
 });
 
@@ -85,7 +85,7 @@ app.delete('/livros/:id', async (req, res) => {
         res.json(results);
     } catch (err) {
         res.json(err.detail);
-        res.sendStatus(400);
+        res.sendStatus(500);
     }
 });
 
@@ -98,7 +98,7 @@ app.put('/livros', async (req, res) => {
        
     } catch (err) {
         res.json(err.detail);
-        res.sendStatus(400);
+        res.sendStatus(500);
     }
 });
 
@@ -111,7 +111,7 @@ app.post('/autores', async (req, res) => {
         res.json(results);
     } catch (err) {
         console.log(err);
-        res.sendStatus(400);
+        res.sendStatus(500);
     }
 });
 
@@ -123,7 +123,7 @@ app.put('/autores', async (req, res) => {
         res.json(results);
     } catch (err) {
         console.log(err);
-        res.sendStatus(400);
+        res.sendStatus(500);
     }
 });
 
@@ -133,7 +133,7 @@ app.get('/autores', async (req, res) => {
         res.json(results);
     } catch (err) {
         console.log(err);
-        res.sendStatus(400);
+        res.sendStatus(500);
     }
 });
 
@@ -144,7 +144,7 @@ app.get('/autores/:id', async (req, res) => {
         res.json(results);
     } catch (err) {
         console.log(err);
-        res.sendStatus(400);
+        res.sendStatus(500);
     }
 });
 
@@ -155,7 +155,7 @@ app.get('/autores/nome/:nome', async (req, res) => {
         res.json(results);
     } catch (err) {
         console.log(err);
-        res.sendStatus(400);
+        res.sendStatus(500);
     }
 });
 
@@ -166,7 +166,7 @@ app.delete('/autores/:id', async (req, res) => {
         res.json(results);
     } catch (err) {
         res.json(err.detail);
-        res.sendStatus(400);
+        res.sendStatus(500);
     }
 });
 
@@ -180,7 +180,7 @@ app.post('/clientes', async (req, res) => {
         res.json(results);
     } catch (err) {
         console.log(err);
-        res.sendStatus(400);
+        res.sendStatus(500);
     }
 });
 
@@ -190,7 +190,7 @@ app.get('/clientes', async (req, res) => {
         res.json(results);
     } catch (err) {
         console.log(err);
-        res.sendStatus(400);
+        res.sendStatus(500);
     }
 });
 app.get('/clientes/:matricula', async (req, res) => {
@@ -200,7 +200,7 @@ app.get('/clientes/:matricula', async (req, res) => {
         res.json(results);
     } catch (err) {
         console.log(err);
-        res.sendStatus(400);
+        res.sendStatus(500);
     }
 });
 
@@ -211,7 +211,7 @@ app.get('/clientes/nome/:nome', async (req, res) => {
         res.json(results);
     } catch (err) {
         console.log(err);
-        res.sendStatus(400);
+        res.sendStatus(500);
     }
 });
 
@@ -222,7 +222,7 @@ app.put('/clientes', async (req, res) => {
         res.json(results);
     } catch (err) {
         console.log(err);
-        res.sendStatus(400);
+        res.sendStatus(500);
     }
 });
 
@@ -233,7 +233,7 @@ app.delete('/clientes/:matricula', async (req, res) => {
         res.json(results);
     } catch (err) {
         res.json(err.detail);
-        res.sendStatus(400);
+        res.sendStatus(500);
     }
 });
 
